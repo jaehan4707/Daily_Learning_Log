@@ -1,5 +1,5 @@
 # Daily_Learning_Log
-Record what I have learend
+공부한것들을 기록할래요
 
 # 📚Things
 `Algorithm`, `Android`, `CS`,`Kotlin`
