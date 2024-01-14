@@ -10,15 +10,11 @@ public class Main {
     static int[] graph;
     static boolean[] visit;
 
-    static int myPeople = 0;
-    static int otherPeople = 0;
     static int answer = Integer.MAX_VALUE;
-
-    static ArrayList<Integer> origin = new ArrayList<>();
     static ArrayList<Integer> other = new ArrayList<>();
     static ArrayList<Integer> my = new ArrayList<>();
 
-    static ArrayList<Integer>[] list;
+    static ArrayList<ArrayList<Integer>> list;
 
     public static void main(String[] args) throws IOException {
         br = new BufferedReader(new InputStreamReader(System.in));
@@ -30,26 +26,26 @@ public class Main {
         n = Integer.parseInt(st.nextToken()); // 구역 수
         graph = new int[n + 1];
         st = new StringTokenizer(br.readLine());
-        list = new ArrayList[n + 1];
+        list = new ArrayList<>(n + 1);
         for (int i = 1; i <= n; i++) {
             graph[i] = Integer.parseInt(st.nextToken());
-            origin.add(i);
-            list[i] = new ArrayList<Integer>();
+        }
+        for (int i = 0; i <= n; i++) {
+            list.add(new ArrayList<>());
         }
         for (int i = 1; i <= n; i++) {
             st = new StringTokenizer(br.readLine());
             int amount = Integer.parseInt(st.nextToken());
             for (int j = 0; j < amount; j++) {
                 int area = Integer.parseInt(st.nextToken());
-                list[i].add(area);
+                list.get(i).add(area);
             }
         }
         for (int i = 1; i < n; i++) {
             init();
             combination(i, 0, 1);
         }
-        if (answer == Integer.MAX_VALUE)
-            System.out.print(-1);
+        if (answer == Integer.MAX_VALUE) System.out.print(-1);
         else System.out.print(answer);
     }
 
@@ -57,6 +53,8 @@ public class Main {
         if (count == limit) { //다 뽑았다는 뜻.
             other.removeAll(my);
             if (isConnected(my) && isConnected(other)) { //조합에 대해서 연결된것인지 확인 .. 그러면 반대편도 확인해야하지않나?
+                int myPeople = 0;
+                int otherPeople = 0;
                 for (int m : my) {
                     myPeople += graph[m];
                 }
@@ -65,8 +63,6 @@ public class Main {
                 }
                 answer = Math.min(answer, Math.abs(myPeople - otherPeople));
             }
-            myPeople = 0;
-            otherPeople = 0;
             init();
             return;
         }
@@ -85,25 +81,24 @@ public class Main {
     }
 
     public static boolean isConnected(ArrayList<Integer> ary) {
+        //s에 들어간곳끼리는 연결된곳이 확실하니 다른 집합을 확인해야함.
         visit = new boolean[n + 1];
         int count = 0;
         Queue<Integer> q = new LinkedList<>();
         q.add(ary.get(0));
         while (!q.isEmpty()) {
             int now = q.poll();
-            if (visit[now])
-                continue;
+            if (visit[now]) continue;
             count++;
             visit[now] = true;
-            for (int i = 0; i < list[now].size(); i++) {
-                int next = list[now].get(i);
+            for (int i = 0; i < list.get(now).size(); i++) {
+                int next = list.get(now).get(i);
                 if (ary.contains(next) && !visit[next]) { //구역에 포함되어있고, 방문안한곳이라면
                     q.add(next);
                 }
             }
         }
-        if (count == ary.size())
-            return true;
+        if (count == ary.size()) return true;
         return false;
     }
 }
