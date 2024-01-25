@@ -2,7 +2,7 @@
 공부한것들을 기록할래요
 
 # 📚Things
-`Algorithm`, `Android`, `CS`,`Kotlin`
+`Algorithm`, `Android`, `CS`,`Kotlin`,`Data Structure`
 
 # 📁Directory 
 ```bash
@@ -10,6 +10,7 @@
 ├── Android      # Android 공식 문서 및 기술 정리
 ├── CS           # OS,NetWork
 └── Kotlin       # Kotlin 문법 및 Kotlin in Actions 정리
+└── Data Structure # 자료구경
 ```
 
 # ✉️ Commit Message
