@@ -11,7 +11,7 @@
 ## 기본 정렬 알고리즘
 
 - `Selection Sort` , `bubble sort`, `insertion sort` 가 있다.
-- 시간 복잡도는 $O(n^2)$에 해당한다.
+- 시간 복잡도는 `O(n^2)`에 해당한다.
 
 ### Selection Sort(선택 정렬)
 
@@ -43,7 +43,7 @@ public static void selectionSort(){
 
 수행 시간
 
-- 시간복잡도는 $O(n^2)$이다.
+- 시간복잡도는 `O(n^2)`이다.
     - n-1 + n-2 + … 1 = n(n-1)/2
 
 ---
@@ -76,7 +76,7 @@ public static void bubbleSort() {
 
 수행 시간
 
-- n-1 + n-2 + … 1 → $O(n^2)$
+- n-1 + n-2 + … 1 → `O(n^2)`
 
 ---
 
@@ -103,15 +103,15 @@ public static void insertionSort() {
 ```
 
 - 삽입을 위한 비교는 최악의 경우 i-1번 발생할 수 있고, 최고의 경우는 1번만 비교하는것이다.
-- 최악의 경우는 $O(n^2)$
-- 최고의 경우는 $O(n)$
+- 최악의 경우는 `O(n^2)`
+- 최고의 경우는 `O(n)`
 
 ---
 
 ## 고급 정렬 알고리즘
 
 - `Merge Sort` , `Quick Sort` , `Heap Sort` 가 있다.
-- 시간 복잡도는 $O(nlogn)$에 해당한다.
+- 시간 복잡도는 `O(nlogn)`에 해당한다.
 
 ### Merge Sort
 
@@ -160,7 +160,7 @@ public static void mergeSort(int left, int right) {
 
 수행 시간
 
-- $O(nlogn)$
+- `O(nlogn)`
 
 ---
 
@@ -201,9 +201,9 @@ public static int partition(int left, int right) {
 
 특징
 
-- 최악의 경우 $O(N^2)$으로 다른 정렬 알고리즘보다 느리지만, 평균적으로 Merge Sort, Heap Sort보다 빠르다
+- 최악의 경우 `O(N^2)`으로 다른 정렬 알고리즘보다 느리지만, 평균적으로 Merge Sort, Heap Sort보다 빠르다
     - 최악의 경우는 이미 정렬된 배열을 정렬하려고 할 때이다.
-- 평균적으로 $O(nlogn)$ 의 시간복잡도를 가진다.
+- 평균적으로 `O(nlogn)` 의 시간복잡도를 가진다.
 - 추가적인 배열을 사용하지 않아 메모리 소비양이 적다.
 
 ```java
@@ -227,7 +227,7 @@ Heap?
 
 ![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/85238a6a-78c8-4cbd-ba8b-8c21adcbac4e/Untitled.png?id=4058a241-a193-4b23-9427-8d28b223dd80&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708524000000&signature=8QSxJKlz5X2bnmCO93OCw-nYxAWGTQL8JRr5LzIkCio&downloadName=Untitled.png)
 
-- 최악의 경우 $O(nlogn)$의 시간복잡도를 가진다.
+- 최악의 경우 `O(nlogn)`의 시간복잡도를 가진다.
 
 ```java
 static void hearypSort(int n) {
@@ -263,9 +263,9 @@ static void hearypSort(int n) {
 	}
 ```
 
-- 최악의 경우에도 $O(nlogn)$으로 유지가 된다.
+- 최악의 경우에도 `O(nlogn)`으로 유지가 된다.
 - 힙의 특징상 부분 정렬을 할 때 효과가 좋다
-- 일반적인 $O(nlogn)$ 정렬 알고리즘에 비해 성능은 약간 떨어진다.
+- 일반적인 `O(nlogn)` 정렬 알고리즘에 비해 성능은 약간 떨어진다.
 
 
 ![](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/f1dcee85-4599-4c72-83cd-5e76124eaf2f/Untitled.png?id=c211f422-c5c2-4a34-aef2-4222a959bb3f&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708524000000&signature=mTl7lU31pLNrCmWRUjscBJOfpxRRjFgph7abBsWXzoc&downloadName=Untitled.png)

@@ -22,7 +22,7 @@ public static void sequentialSearch(int goal) {
 }
 ```
 
-- 시간 복잡도 : $O(n)$
+- 시간 복잡도 : `O(n)`
 
 ## Binary Search(이진 탐색)
 
@@ -53,4 +53,4 @@ public static int binarySearch(int goal) {
 
 시간 복잡도
 
-- 탐색 : $O(logn)$
+- 탐색 : `O(logn)`
