@@ -8,7 +8,8 @@
 ```bash
 ├── Algorithm    # Algorithm 정리
 ├── Android      # Android 공식 문서 및 기술 정리
-├── CS           # OS,NetWork
+├── OS          # OS
+├── Network     # Network
 └── Kotlin       # Kotlin 문법 및 Kotlin in Actions 정리
 └── Data Structure # 자료구조
 ```
