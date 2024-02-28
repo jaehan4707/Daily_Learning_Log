@@ -150,4 +150,4 @@ fun removeCat(cat: Cat) {
 
 클릭할때마다 해당 함수가 실행되도록 했고, 데이터가 변화하고, UI가 변화하는것을 확인할 수 있었다.
 
-[리사이클러뷰.webm](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/be469fee-de86-4e86-ab1d-d3a772c6ce3f/%E1%84%85%E1%85%B5%E1%84%89%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A5%E1%84%87%E1%85%B2.webm?id=a01bc2a4-74dd-4512-abed-57b7c1b11eea&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709222400000&signature=vzlvpsAHTEQldNPjnelwQ6xMD9VsmoD9h4kfIAmM1S0&downloadName=%E1%84%85%E1%85%B5%E1%84%89%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A5%E1%84%87%E1%85%B2.webm)
+[리사이클러뷰.webm](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/cda139ab-6f9a-450c-b5a5-070d2c145798)
