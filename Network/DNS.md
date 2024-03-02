@@ -228,3 +228,8 @@ hosts 파일은 Local DNS이다.
 해당 도메인에 대항 IP 주소가 매핑되어있다면,
 쿼리를 보내지 않고 IP 주소를 사용한다.
 ```
+
+# 참고
+https://github.com/devSquad-study/2023-CS-Study/blob/main/Network/network_dns_and_network_flow.md
+https://devfancy.github.io/Network-DNS/
+https://jja2han.tistory.com/301
