@@ -30,19 +30,13 @@ class Solution {
 
     private fun meltingCheese() {
         while (!isMelted()) { // 치즈가 전부 녹았는지를 검사
-            val temp = graph.copyOf()
-            val nextCheese = arrayListOf<Pair<Int, Int>>()
             divideAir() // 외부공기 내부공기 구분
             while (cheese.isNotEmpty()) {
                 val now = cheese.removeFirst()
                 if (isAroundAir(now.first, now.second).not()) { //공기가 주변에 없다면
-                    temp[now.first][now.second] = 0 //치즈를 녹임
-                } else {
-                    nextCheese.add(Pair(now.first, now.second))
+                    graph[now.first][now.second] = 0 //치즈를 녹임
                 }
             }
-            cheese = nextCheese
-            graph = temp
             answer++
         }
     }
@@ -64,7 +58,7 @@ class Solution {
                 if (!checkedRange(mx, my)) {
                     continue
                 }
-                if(graph[mx][my]==1) {
+                if (graph[mx][my] == 1) {
                     cheese.add(Pair(mx, my))
                     continue
                 }
@@ -96,9 +90,9 @@ class Solution {
     private fun checkedRange(row: Int, col: Int) = row in 0 until n && col in 0 until m
 
     private fun isMelted(): Boolean {
-        for(i in 0 until n){
-            for(j in 0 until m){
-                if(graph[i][j]==1)
+        for (i in 0 until n) {
+            for (j in 0 until m) {
+                if (graph[i][j] == 1)
                     return false
             }
         }
