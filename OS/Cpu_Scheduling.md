@@ -31,7 +31,7 @@ CPU 스케쥴러의 목적은 `사용자 측면`과 `시스템 측면`간의 차
 
 CPU 스케쥴링은 이러한 목적을 가지고 있고, 다음과 같은 사건이 발생할때 일어난다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/bea1f681-e907-4ad0-8d9e-c46aa582a35d/4faf2092-f416-4018-b865-4d47d764b733/Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/cad46c2d-123c-431d-b81d-29c70ac14323)
 
 - 프로세스가 I/O를 요구할 때
 - 프로세스가 종료를 요구할 때

@@ -27,7 +27,7 @@ DNS의 특징으로는 `중앙 집중화된 데이터베이스`가 아닌 `계�
 
 따라서 DNS는 많은 서버를 이용해서 계층화된 구조를 이루고 있다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/b4a588c6-f5ce-4b80-a55c-7663f997e762/Untitled.png?id=a197e746-2649-40ba-9c9a-034af4e5b349&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709467200000&signature=gthzNd2mp5wj9134CBBbiBZo8jrevpptSgfWAZYe94o&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/b1bbf753-7969-4607-a2d0-a2d95de0994b)
 
 3가지의 계층으로 나뉜것을 알 수 있다.
 
@@ -66,7 +66,7 @@ Query의 종류는 `Iterated query`, `Recursive query`가 있다.
 
 ---
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/4ad4fc2e-e27a-4cd9-b8bd-f87bce3eaa74/Untitled.png?id=84aaea68-189c-4d67-9e7b-b8ad12d87f97&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709467200000&signature=0uroUov7ZWSLXy3wZ69rOaeFyHFQcZAiszhV2LIvSy0&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/0ac5258f-cef2-4252-a5ca-08f06069ec74)
 
 1. local dns 서버가 사용자의 요청을 받는다.
 2. local dns 서버는 root dns 서버에 쿼리를 보내고, root Dns Server는 .edu에 해당하는 TLD를 제공한다.
@@ -78,7 +78,7 @@ Query의 종류는 `Iterated query`, `Recursive query`가 있다.
 
 ### Recursive Query
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/4f8aa221-2bfc-4766-88e4-aea93dc84de8/Untitled.png?id=fbfe51ff-0794-472a-b88a-d59aaf132a12&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709467200000&signature=0VpZu9bBLqxkKe1ZbG9qF_Tuz_Yj4BZjFdQ7AaJOEa4&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/d0b51aa6-5ec3-49d1-98b8-453708ac3159)
 
 - Iterative Query와 다르게 계층적인 구조로 타고 타고 들어가는 방식이다.
 

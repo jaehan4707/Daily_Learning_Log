@@ -302,7 +302,7 @@ TCP Tahoe와 동일한 알고리즘이지만  TCP Tahoe는 **3 duplicate ACKs와
 
 - 임계점 값을 현재 윈도우 크기의 반으로 설정하고, 현재 윈도우의 크기를 1로 초기화한다.
 
-# Expected Question
+# 예상 질문
 
 ---
 

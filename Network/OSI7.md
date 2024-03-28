@@ -1,6 +1,6 @@
 # OSI 7계층
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/44cea05d-4b16-43be-abde-45beeb67b07e/Untitled.png?id=4c9f0eff-3dec-4b01-bdf7-4b38ee892c3c&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709467200000&signature=-Op9IKPP6EYcpz0v_C7YC4igzhym43HSfXt4ZkbQo8E&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/11a6e3cf-35ef-4d61-a3d5-4422847b0585)
 
 ## OSI를 계층으로 나눈 이유
 

@@ -11,7 +11,7 @@
 
 과정
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/86acc03c-976f-46d9-b556-613102d96874/Untitled.png?id=82c8ed2b-acdc-4de8-8254-ad2738dae529&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709467200000&signature=GVW6tgNxQz4CeAidOfj9wcxx15H9cfF7F9vQHq7iIi8&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/4a916f47-45b7-48f0-93e7-b56e614f4ec2)
 
 - 사용자 사이트 접속
 - 사용자의 쿠키 파일 전송
@@ -48,7 +48,7 @@
 
 자주 사용하는것은 미리 빼두면 되지 않을까? 혹은 미리 준비해주면 되지 않을까?라는 생각에서 출발한 개념이 Web caches이다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/aaffeb9c-bc30-46d4-a17a-e4d6945566de/Untitled.png?id=abc8320a-a71f-45ca-a987-30aa15f2e2fc&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709467200000&signature=JD3rNZdypvVYsiOzMBR56vvrBQpGxubgXU4q9U1zZdE&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/0a009eb1-b90a-465c-82eb-42e4f6579b05)
 
 1. 클라이언트는 origin server가 아닌 Web caches에 요청을 합니다.
 2. Web caches에 있다면 클라이언트에게 요청한것에 대해 반환해줍니다.

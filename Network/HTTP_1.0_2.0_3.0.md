@@ -30,7 +30,7 @@ Hyper Text Transfer Protocol은 HTML 문서와 같은 리소스들을 가져올 
 
 ## HTTP/1.1
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/ed098ea9-41eb-44ab-b5a0-2924640eef76/Untitled.png?id=0126d148-80e3-49c5-a6e3-746ddd9fbe1a&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709467200000&signature=Ir0zMJP9tkIVdPLNW8_4e4CIk096KfAvj_aC0UDxTY4&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/5dd659c4-1d20-411f-9fce-8704e36b169d)
 
 Connection당 하나의 요청을 처리하도록 설계되었다.
 요청의 순서는 순차적으로 FCFS로 진행한다.하지만 이러한 방식은 순서가 명확하게 정해져있기에 문제가 있었다. 처리하기 쉬운 오브젝트도 순서가 후순위라면 기다려야하는 단점이 생긴다.
@@ -53,7 +53,7 @@ TCP 연결을 하나의 요청이 아닌 여러 요청에 대해서도 사용을
 요청시간을 대폭 감소시켰다.
 ```
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/6c706686-384f-4da0-86d9-b100f5590ba8/Untitled.png?id=c6fd2ba0-7c9b-4901-bfe2-cb870b8aa8c3&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709467200000&signature=N2FBamWnK0yh1fQg5y2ORitrHCnvNah4nV3I2DQxe8w&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/13665219-955e-411b-b12f-c4ba9d1d422c)
 
 ## HTTP/2
 
@@ -63,7 +63,7 @@ TCP 연결을 하나의 요청이 아닌 여러 요청에 대해서도 사용을
 
 HOLB를 줄이는것을 목적으로 등장했다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/7cd00b4a-e406-4ca4-ae29-3722534d0979/Untitled.png?id=bd3fb48e-a3d2-45ce-99c9-d40323d61192&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709467200000&signature=2p3gYGl07gAyVqATN3vxBMt8-DKHnazZtaytWa0DdZI&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/f3895ce9-68f7-4194-8e3e-4c474ae4ea5c)
 
 그림을 보면 O1에 의해 빨리 끝낼 수 있는 작업인 O2,O3,O4가 기다리고 있는 모습을 확인할 수 있다.
 
@@ -71,7 +71,7 @@ HOLB를 줄이는것을 목적으로 등장했다.
 
 HTTP는 HOLB를 막기 위해서 프레임 단위로 작업을 처리합니다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/730db06c-1a07-492d-8a7c-3ccfaa95c7ce/Untitled.png?id=509899db-1ccf-4ee2-9c0f-5cd263c2241e&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709467200000&signature=wBm4XrU-X-gJ02oFFaqjLOzrtjuZIbbJfW_Fi_8WdcA&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/84ff136a-3c8e-41a6-936a-0069a46283e1)
 
 이렇게 프레임 단위로 작업을 나눠서 진행함으로써 다른 작업들이 큰 작업에 의해 기다리는 지연시간이 짧아졌다.
 
@@ -83,7 +83,7 @@ HTTP3는 QUIC라는 프로토콜을 기반으로 동작하는데, QUIC가 UDP를
 
 UDP는 신뢰성을 보장하지 않는 통신이지만, 자체적인 신뢰성 보장을 제공하는 기능을 추가하고, 성능을 개선한 프로토콜인 QUIC를 사용해서, 신뢰성을 보장받을 수 있다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/5c22bb99-042d-4ce5-afc5-1ad99e72602d/Untitled.png?id=bac40419-5d84-4751-9388-c42f0d742d52&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709467200000&signature=5RlWFmYV_6A3M9mUk_t6kmzlTxKpdD1r_bAR3ctm45c&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/fb243637-a36d-48a5-b9f5-97f91586989b)
 
 - 연결 내 스트림이 완전히 독립적으로 동작해서 하나가 실패해도 다른 스트림에 영향을 주지 않는다.
 - IP 기반이 아니라 연결 별 고유 UUID를 이용해 각 연결들을 식별한다.
