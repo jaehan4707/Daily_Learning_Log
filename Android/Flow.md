@@ -444,3 +444,19 @@ Ui는 단순하게 StateFlow를 구독만 하면 된다.
 - 데이터가 외부에서 생성
 - 하나의 생산자에 다수의 소비자가 존재
 - 생산자가 소비자의 소비를 신경쓰지 않고 생산
+
+# LiveData vs StateFlow
+
+기존의 LiveData로 표현하던 UiState를 StateFlow로 많이 전환하고 있는 추세이다.
+
+두 방법의 차이는 LiveData는 수명주기를 자동으로 인식하는것이고,
+
+Flow는 repeatOnLifecycle 같은 코드를 통해서 수명주기에 따라 수집을 제어하는 것이 필요하다.
+
+그렇다면 LiveData가 더 편하지 않을까라는 생각이 들곤한다.
+
+그렇다면 왜? LiveData말고 StateFlow를 사용하는것을 권장할까?
+
+그것은 바로 LiveData는 안드로이드 플랫폼에 종속적이고, StateFlow는 순수 Kotlin이라는 점이다.
+
+이는 곧 클린 아키텍처의 관점에서 Domain Layer에서 LiveData가 아닌 StateFlow를 사용해 안드로이드의 종속성을 없애기 위해서이다.
