@@ -7,11 +7,11 @@
 # 📁Directory 
 ```bash
 ├── Algorithm    # Algorithm 문제 풀이
-├── Android      # Android 공식 문서 및 기술 정리
+├── Android      # Android 공식 문서, 기술 정리
 ├── OS          # OS
 ├── Network     # Network
 └── Kotlin       # Kotlin
-└── Data Structure # 자료구조
+└── Data Structure # 자료구조, 알고리즘 이론
 ```
 
 # ✉️ Commit Message
