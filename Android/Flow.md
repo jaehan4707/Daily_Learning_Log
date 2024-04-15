@@ -20,7 +20,7 @@ A는 물이 필요하다면 파이프를 열고 물을 받는다.
 
 이런 예를 `Android`에서 확인해보자.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/ba0a010a-65ec-41e0-ae69-d48f0e4c9eec/Untitled.png?id=a9d3d239-555d-49d8-acaf-7366529112e7&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708041600000&signature=VaE0O7uBU6m6rThEJTCyGdcOh6EojFg3j83pzYUqZtg&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/07a526ba-c807-4ec3-bbbc-ebf02a6a1ba0)
 
 뷰가 시작되면 뷰는 ViewModel에 데이터를 요청하고, ViewModel은 Data layer에 데이터를 요청할 것이다.
 
@@ -28,7 +28,7 @@ suspend 함수로 손쉽게 해결할 수 있지만 이러한 방법도 비효�
 
 즉 인프라에 투자를 해야한다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/7dc488de-f008-4af9-879b-1adeb9536468/Untitled.png?id=87c41bc1-69fb-4b42-97fb-d749d075fba3&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=h_wYv-9nlmqdEHAZXcUNOt5vTHR3yK631hq88b7Wg84&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/87335aa4-2c4d-46a7-bcaa-ee87957f1762)
 
 데이터를 요청하는 대신 관찰하는것이다.(데이터를 관찰하는것은 수도관을 설치하는것과 동일하다)
 
@@ -38,13 +38,13 @@ suspend 함수로 손쉽게 해결할 수 있지만 이러한 방법도 비효�
 
 관찰하는 쪽(View)가 관찰 대상(Data)의  변화에 자동으로 반응하기 때문이다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/1cee7c48-ba50-4611-8063-66fa5af3b778/Untitled.png?id=a2f35192-308a-4fc9-a39b-7653fe3c09a2&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=wUE9gBOhSvq4ywTffFJOdL_-awBZhk923xVwgRRKPpE&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/51cb378b-e349-4759-bd88-2ff677de9441)
 
 안드로이드 아키텍처에서도 강조하듯이 데이터는 UDF 패턴을 따르는것이 좋다.
 
 어디서 오류가 생겼고, 추적하기가 쉽기 때문이다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/0f654831-4cf7-497c-9302-9e1746ca5786/Untitled.png?id=42db6b72-81ac-43c0-8de2-5ad24c6f579b&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=inmjS5kxTYbZW9tfaksJ4HnBaQV56AmhWsnO8sQmcOU&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/f302886d-59d4-4570-9c79-5b6c97b36117)
 
 즉 데이터 방향을 하나로 흐르게하고, 수도관 역할을 하는  인프라를 구현해서,
 
@@ -56,8 +56,8 @@ Flow는 어떠한 데이터 타입이 될 수 있다.
 
 몇가지 단어가 등장하는데
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/20d5c654-4ec1-47dc-99e5-59da3b5bbe31/Untitled.png?id=13241444-8fb2-4e4f-aa02-c57bcd13dda6&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=HyCNSuSRYv1MZkT-_PPd2ppc22Ai5y-LU3lJ2POkBiU&downloadName=Untitled.png)
 
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/9791ab83-af0e-4be1-8da0-74f27ba24a8f)
 ### Producer
 
 - 데이터를 Flow에 입력(Emit)한다.
@@ -95,7 +95,7 @@ Flow builder는 suspend 블록을 매개변수로 받는다. → suspend 함수�
 
 왜냐하면 Flow는 코루틴의 컨텍스트에서 실행되기 때문이다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/a7f5aa90-4a01-43f1-ac15-e37065de19e1/Untitled.png?id=eedad1e4-f0b7-4081-a9d3-a41c28f83e2f&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=to3CZQPExi5cSrYKs8F20fj1OhT3Va_XkL6NMNRUX2k&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/71590658-f8c8-4fed-8058-29d924ccfae2)
 
 관찰자가 떠나고 항목 수집을 중단하면 Flow도 중단한다.
 
@@ -127,13 +127,13 @@ Flow.catch
 
 Upstream Flow
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/0a247c25-a766-4981-9c97-d77d96a2b609/Untitled.png?id=fb9a333a-a01e-4bab-8e10-54e23efb314f&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=i9EpzZKekGIqygALVWe2Jea8pb1eMQ6WeQ_Xn1sumrA&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/24cf09b9-d298-436f-b891-27430d0ea105)
 
 프로듀소 블록에서 생성한 플로우이고, 현재 연산자 전에 이들을 호출한다.
 
 DownStream Flow
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/e9acd941-d609-467b-9c39-b5e63e5a073b/Untitled.png?id=41e7375f-8dc5-4b25-a394-ed624eea64b4&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=e1gzPp1oBTk3uMTqVbJfUVijdZSodFMcB9jQ2MklZ4Q&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/5c69ecc7-574c-4651-bb9a-72033566e54b)
 
 현재 연산자 이후에 발생하는 모든것을 다운스트림 플로우라고한다.
 
@@ -153,7 +153,7 @@ userMessages.collect{ messages->
 - collect는 새로운 값이 생길 때 마다 호출되는 함수를 매개변수로 받는다.
 - 당연하게도 suspend 함수이기 때문에 코루틴 내에서 호출할 수 있다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/83c7c2f9-a7d1-43fe-9d51-4e7d9b43e82e/Untitled.png?id=ff349156-cf8c-4d3c-b14c-b0e6ff25e688&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=kqfScXDzotbpF0g8rND1I-ngm7bt1tPng6_GjO151K8&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/771671f3-7e0d-4364-b9fc-f0a336704c33)
 
 collect를 호출할 때마다 새로운 Flow가 생성된다.
 
@@ -186,7 +186,7 @@ UI가 적절히 동작하고, 화면에 UI가 표시되지 않을때는 플로�
 
 여러가지 옵션이 있는데,
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/2f7d33a7-baa7-4a47-acec-a3c2cdf27350/Untitled.png?id=153d850e-8256-4f30-bb51-b5a432cb78aa&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=Uymc9p1xAYvGGre7GNaROVNI81rBIoPxH1vM15aI2zA&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/71524ae2-ae90-42b1-8919-7f1f12053af9)
 
 모든 옵션이 UI 수명 주기와 연관이 있다.
 
@@ -210,14 +210,13 @@ repeatOnLifeCycle은 UI 수명 주기를 자동으로 고려한다.
 
 따라서 여러 플로우를 수집해야 할 경우 repeatOnLifeCycle 블록안에서 launch 를 사용해 collect 해라.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/980b627a-08ec-49c3-9880-7e71caa1be98/Untitled.png?id=38cbe53f-bf45-4c2d-8d62-5a70b1e0f182&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=6A5BTrWtc1rrex9r0ZQvv_ejt4wbayDPj8k1HMBEnOQ&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/3d8fd8bd-6f8e-4fc0-b38b-73787ebc80ab)
 
 ### flowWithLifeCycle
 
 - 수집할 플로우가 하나뿐일 때 사용할 수 있다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/b447bcb1-8f51-466a-b610-7788e8b71686/Untitled.png?id=7c92317f-b520-4a86-b65b-fa2072ce87ef&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=f0BfkZppOt0QVD3XU1GRBZm_AQl9yRcBBI5fIRFAicA&downloadName=Untitled.png)|![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/a6dfd78b-6891-4348-adc9-7d450dfeeaa9/Untitled.png?id=465ee704-2e15-4aa6-93d1-a130c2de7ac6&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=Ivt_r7u-_VQXvbcJvF4GBvG9nlMKQ8HlXI5NVezjE5U&downloadName=Untitled.png)
----|---|
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/7746c1e4-5b9a-4366-b33d-21ceab9bb75a)
 
 보통의 동작으로 홈화면을 누른다면 해당 앱이 백그라운드 영역에 가고 수명주기는 onStop에 머무른다.
 
@@ -225,7 +224,7 @@ repeatOnLifeCycle은 UI 수명 주기를 자동으로 고려한다.
 
 repeatOnLifeCycle은 view가 화면에 표시되는 동안 collect를 하다가, 화면에서 없어지면 중단한다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/ef96befe-66a0-4705-9662-66779b2438f9/Untitled.png?id=63973b9c-35be-4e27-a018-ef75284517ea&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=fbT_6OGG8Zd3P8F8HD3WVRXWYLtvUnoGCW4ZbR98MAg&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/61824dcf-6d55-4b00-a207-cc27c1541e87)
 
 이런 방식은 위험하다.
 
@@ -247,7 +246,7 @@ Flow를 뷰에 노출할 경우 수명 주기가 서로 다른 두 요소 사이
 
 액비비티와 프래그먼트가 대표적인 예
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/377d86a0-6660-44b9-83b2-3bf1c3c50d32/Untitled.png?id=27c2c7a2-bc12-4430-af6b-89b1cacb8024&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=UAk8uJgIN4p4WUKfK37LouPD_cfTLH9bG2ovdRtyUAw&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/c5eb819d-5f10-4b11-9c96-dcda8d1bfe68)
 
 기기가 회전되었거나 구성 변경을 수신하면 모든 액티비티를 다시 시작하지만 viewmodel은 그렇지 않다.
 
@@ -271,7 +270,7 @@ val result : Flow<Result<UiState>> = flow {
 
 ## StateFlow
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/ee4abced-b3b7-49ff-b19d-6196e31ea186/Untitled.png?id=bb989889-4b10-4031-b296-933ffe3d6eec&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=o0850VOxGH9MRftcKYvUJnPxhXCJ5b3aYi_YBec71bg&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/023c16df-692a-431c-bc01-f669b1149f2c)
 
 StateFlow는 물탱크에 비유할 수 있다.
 
@@ -279,7 +278,7 @@ StateFlow는 물탱크에 비유할 수 있다.
 
 일회성 수집이 아닐 수 있으므로 액티비티나 프래그먼트와 함께 사용하는것이 안전하다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/1c211bcd-2502-4509-8185-16543239fa0a/Untitled.png?id=6430265f-9c15-42ea-8ba9-3be2e4d96d3a&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=ezEUHqlMWqKYyX1OMcuJj7ieRXqrJxaT_O6-aP8KTr8&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/1162de56-f263-40ed-9b4d-95e5a799e283)
 
 Flow를 StateFlow로 변환하는데 `stateIn` 연산자를 사용한다.
 
@@ -312,13 +311,13 @@ Timeout 전에 플로우를 수집하면 업스트림 플로우가 취소되지 
 
 이러한 일을 마지막 매개변수인 started가 한다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/26803249-fdb2-42dc-b1b7-cef00fa6a1c8/Untitled.png?id=ae290dc2-621c-49f6-80de-bae407f5680e&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=ZkbrcQwr4SQvsbA6rh4KZjPeMlV_sdcQj5Gac--t10I&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/ba32fb62-0831-4ec1-8aad-74f4ed151162)
 
 홈으로 이동한경우와 같이 Timeout 동안 플로우를 수집 못할경우 자동으로 cancel 되고,
 
 onStart가 호출되면 다시 플로우가 시작된다
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/01f5df30-3e4e-4386-9bf9-1ddfcff7d402/Untitled.png?id=8a06da8e-17c9-44b4-9138-5f6ca83e9e94&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=8dr0qd_X-lyUtgpdkpabaQd188c4zsAYIGVH-tgPBso&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/c048e0be-e86c-4afc-8466-8f01fe7b96e1)
 
 회전시나리오에서 뷰는 잠시 중단된다.
 
@@ -358,13 +357,13 @@ Coroutine Flow는 코루틴 상에선 리액티브 프로그래밍을 지원하�
 
 코루틴에서 데이터 스트림을 구현하기 위해서는 Flow를 사용해야 한다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/7efc2dff-6616-41b8-b412-1f55ed7e353d/Untitled.png?id=1149458e-6c04-40c2-931b-72ae55252c1f&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=u9zWDTG3nBvV1oqO9RqZch_Fe2BFLSilUxwT1dOcXf0&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/6d635653-6128-4ec9-a363-915aaa4fc0f7)
 
 ## 데이터 스트림의 구성요소
 
 ### Producer(생산자)
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/f140c645-14d2-4487-883c-292b39834da7/Untitled.png?id=66fe2cc4-de78-4a5b-a693-7e3f38ec85fb&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=2txRAtBNwYKSC7EhBUHuwHX_mt3l-hAcdvHLzZj8a1o&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/6af7dab3-61ca-4d3d-b3db-1bbf276b724b)
 
 - 생산자는 데이터를 발행하는 역할을 한다. Flow에서의 Producer는 flow {} 블록 내부에서의 emit()을 통해 데이터를 생성한다.
 
@@ -375,14 +374,14 @@ Coroutine Flow는 코루틴 상에선 리액티브 프로그래밍을 지원하�
 
 ### Intermediary(중간 연산자)
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/85f9b1de-a7fa-4c8c-8cc3-2000c966ad68/Untitled.png?id=4094fc85-9d63-40c2-b1b3-71f40f6d7c35&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=4g8C0Ur44TTADnEzQX8dSg3WaRC39mJsMZdX8ODDh44&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/62465f22-f2a2-483b-9abc-ba0d69f86f0f)
 
 - 생산자가 데이터를 생성했으면 중간 연산자는 생성된 데이터를 수정한다. 여기서의 중간 연산자는 생산자가 생성한 데이터를 수정한다. 예를 들어 생산자는 A라는 객체로 이루어진 데이터를 발행했는데 우리는 B라는 객체 데이터가 필요한 경우 Flow에서 지원하는 중간 연산자를 이용해 A객체를 B객체로 바꿀 수 있다.
 - 대표적인 중간 연산자는 map, filter, onEach등의 중간연산자가 있다.
 
 ### Consumer(소비자)
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/ba9f8a56-6ff3-4018-a9d4-df8d5d889844/Untitled.png?id=99de991f-1a1d-4030-bfc6-783f640c5d48&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=HpHLxKAoYUXTaxU6yuwA8jX4eiwmrqy2N_rNYeLeARA&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/b642e234-eb2c-4ac8-a875-5e517ea74a36)
 
 - 중간 연산자가 생산자가 생성한 데이터를 변환하여 소비자로 데이터를 전달한다. Flow에서는 collect를 이용해 전달된 데이터를
   소비할 수 있다.
@@ -395,7 +394,7 @@ Coroutine Flow는 코루틴 상에선 리액티브 프로그래밍을 지원하�
 
 Flow는 데이터의 흐름이다. Flow는 데이터의 흐름을 발생시키기만 할 뿐 데이터가 저장되지 않는다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/0b7b7f98-5142-422f-aa90-0882557dc879/Untitled.png?id=f4a9b1d8-1e32-4284-aaa9-3d0881a8989c&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=jNkhdy-MqtnnJbWn_c8MUtVq3-31AOa8Ludye-s-x28&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/0a4a0eee-5eca-4e77-9af5-c4f92248ee5e)
 
 flow 만을 이용해 안드로이드의 UIState를 업데이트 하기 위해서는 두가지 방법이 가능했다.
 
@@ -422,7 +421,7 @@ UI 단에서 StateFlow를 구독해 UiState를 업데이트 하면 화면이 재
 
 Ui는 단순하게 StateFlow를 구독만 하면 된다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/e59394c7-fd08-4e98-af01-1b4abaa69792/Untitled.png?id=7cedf3b4-640b-4dcd-9e4a-674efc78e09d&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708012800000&signature=LF8whEmCxe3Bmyfkd7DADLNsfUDpcqZVnsNPGf5QbOc&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/abba5578-14ce-4bae-b627-ccf0080f8949)
 
 ---
 

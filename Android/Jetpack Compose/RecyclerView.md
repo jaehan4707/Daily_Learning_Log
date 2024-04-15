@@ -66,14 +66,13 @@ index마다 특정 효과나 디자인을 주고싶다면 사용할 수 있을�
 
 리사이클러뷰의 아이템의 이벤트 처리를 위해서 -버튼을 추가해서 아이템을 제거하도록 해봤다. 그 외에도 FAB를 넣어서 화면에서 활용하는 Cats라는 배열에 아이템을 추가해서 화면에 바로 적용이 되는지 확인해보았다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/876060e4-a3c8-4978-b286-4bb09b7b2d92/Untitled.png?id=e3030445-8bc5-4f84-8ead-d05c6a2855f6&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709222400000&signature=_SQWqzWuxbsLlm78d9PATUjApaI1AfpcksHGlurXBbw&downloadName=Untitled.png)|![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/629aa575-fc46-44a5-b855-6260a5220b4b/Untitled.png?id=cb0eb923-7333-496c-b879-4a8c96f59f5c&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709222400000&signature=3CY1ATss2yAluuo1hg2yfqtihb2KLedM04UfnkQrwak&downloadName=Untitled.png)
----|---|
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/70cf2ce1-796e-4f65-a9c3-00ddbe3095e3)
 
 +버튼과 -버튼을 눌렀지만 화면에는 변화가 없었다.
 
 로그를 찍어서 이벤트 호출 여부를 확인했다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/5a961698-a8d3-4c8a-91ec-178d690f71fe/Untitled.png?id=5ba20571-e980-45e9-ab13-b067cc995f4c&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709222400000&signature=5c5t-hGx7_xR1Er14L3aJk27dMvqIVvdxfiGafG72fk&downloadName=Untitled.png)|![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/b75b0510-16ce-42ce-8157-540b626fe52c/Untitled.png?id=e79781dc-7b3d-44e5-b02b-a3e26a2a92de&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709222400000&signature=HcAE-hIlFFULJoYmQQNNvvRc5n1P3e6OXUEOS6r_cM8&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/098fd8e0-f989-4999-97e4-cc5f1f6edc3b)|![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/5f1e6c92-a54c-47ff-8c57-cd8a47aa14a2)
 ---|---|
 
 이벤트가 발생하지만 데이터에 반영이 안됨.

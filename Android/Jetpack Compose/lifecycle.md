@@ -1,6 +1,6 @@
 # Composable 생명주기
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/583a21b1-c9bf-4e2f-9b1c-56791798ed08/Untitled.png?id=edfd87c3-782a-4198-ac26-41f9fbc3b10d&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708365600000&signature=2TP0O0HOBeO4jVv7suQ74yD9eFA9u-ZBQhY1bo7vbE4&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/675e34f4-ee45-4c53-984f-0b6fb6b2bac0)
 
 ## Initial Composition
 
@@ -25,7 +25,7 @@ Composable이 파괴될 때
 
 ---
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/d8d94f1d-87c4-4c45-af9b-b40ce88e07d9/Untitled.png?id=03499305-1804-4b8f-8767-8bed9c37e771&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708365600000&signature=YMwj9Ayo7YX4rHTKa1KhP_8ho81lbr0rZmrJGYJ-42k&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/3a0b0a0e-1cbb-40e5-be8a-aee50262f36e)
 
 ```kotlin
 @Composable
@@ -39,7 +39,7 @@ fun MyComposable(){
 
 MyComposable의 코드를 도식화한 결과가 왼쪽 그림이다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/07c94ecf-465f-4aa5-a7ef-ec76d8c46ff3/Untitled.png?id=4e19c9ea-dcb0-41e2-aef4-18b7821d4d32&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708365600000&signature=wADHcSKoCnoNIDs0xHLrmtUOrIy5N16ZY3qYkty6TLY&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/ac6ffabb-f314-4fa0-a0fe-33df8a6b552c)
 
 ```kotlin
 @Composable

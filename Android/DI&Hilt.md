@@ -249,7 +249,8 @@ object FoodDataModule{
 
 ---
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/aa9dac47-b69e-4b54-a686-14f9e8ab7865/Untitled.png?id=4fe1e13e-d369-4dde-b512-3d3cb8e5a658&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708178400000&signature=CCYwz5ZprsjFzCT2P7jsD0Z7110c09ajEKg9g8sLUMg&downloadName=Untitled.png)
+
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/c25b7e3d-413c-4d9f-98e8-2d06b3f83b75)
 
 @HiltAndroidApp → ApplicationComponent 생성
 
@@ -310,7 +311,7 @@ vs @HiltAndroidApp
 
 ## Hilt Component Hierarchy
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/d818d85a-5ab9-4f3c-977a-d64c8af32c84/Untitled.png?id=d3ca0809-023c-4767-9dc4-e31ae38f7a8e&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708178400000&signature=eQxq4IqdoaM9sjUsr0MtQT3k-pdp_yCsYTEnoHdZu-E&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/43e6e717-2cec-4553-b34f-42b5215a53fc)
 
 ### Hilt Component의 특징
 
@@ -320,7 +321,7 @@ vs @HiltAndroidApp
 
 ## Hilt Scope
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/8c4cb651-b321-4704-a3f5-0bff9564d957/Untitled.png?id=d5ff947b-aee1-4475-b278-79624ae01ff5&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708178400000&signature=kLyiczitrzNOWgzh5ITaXXo5B7ZRXa2pk6BJWRtry-k&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/4db5fcd4-59cc-401c-8fe1-9f36093aa287)
 
 ```kotlin
 scope 어노테이션을 통해 동일 인스턴스를 공유할 수 있다.
@@ -361,7 +362,7 @@ class FoodRepository @Inject constructor(
 
 ## Hilt Module
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/62e5d929-7e66-4773-a723-f45b43302e0f/Untitled.png?id=369b066f-395e-4ea9-913a-c83b9652196a&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708178400000&signature=IyRWxPkimrDXI7bstChT0rmhnTLTSqiB_s3OxrznAg4&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/6097ea30-aaf9-4bd6-9ab9-ea1dbb828cd9)
 
 ## @InstallIn
 
@@ -369,7 +370,7 @@ class FoodRepository @Inject constructor(
 - 해당 모듈이 어떤 컴포넌트에 설치될지 명시하고, 컴파일 타임에 관련 코드를 생성한다.
 - 올바르지 않은 컴포넌트 or 스코프일시 컴파일 에러가 발생
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/6b1d7785-a531-4075-873c-a41ab65eb0c5/Untitled.png?id=01833468-b357-4a20-82a9-647bd0c63edd&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708178400000&signature=be7XlB6oYCRsrdo4ke_9pNOFFUr5HsW9Keryl8pYEOs&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/b464bc08-9b50-4b32-b078-7141f6ebcd48)
 
 ```java
 InstallIn에 명시한 컴포넌트에 설치된다.
@@ -378,7 +379,7 @@ InstallIn에 명시한 컴포넌트에 설치된다.
 만약에 ActivityComponent와 FragmentComponent 둘다 MyModule이
 필요할 경우는 어떻게 해야할까?
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/6b1d7785-a531-4075-873c-a41ab65eb0c5/Untitled.png?id=01833468-b357-4a20-82a9-647bd0c63edd&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708178400000&signature=be7XlB6oYCRsrdo4ke_9pNOFFUr5HsW9Keryl8pYEOs&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/cd6eaa46-7528-46f7-80a5-30b8d623fcf0)
 
 상위 컴포넌트의 모듈을 설치하면 된다.
 

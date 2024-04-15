@@ -8,7 +8,7 @@
 
 View는 다음과 같이 구성되어 있다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/fe6c4574-b4ba-4017-b91e-bd8357cead88/Untitled.png?id=08e8e6ab-783b-4746-b7d4-0552c4726850&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708531200000&signature=bl5dKIqwQ_FMq4pHlely9iU3ezXMVMBQXrREXWUBfhM&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/4cf4cdb1-9341-494c-8b8f-25c48fddb548)
 
 최상단에 위치하고 있으며, 사용자 인터페이스를 구축하고, 유저의 입력 이벤트를 처리한다.
 
@@ -45,11 +45,11 @@ class NodeView(
 
 ## View LifeCycle
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/70210056-a30f-4917-90e9-327bc99042c6/Untitled.png?id=668518f2-3820-4288-84dc-58cc7c3dd056&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708531200000&signature=7jxxn8VuqBpESSZVK-0TMSA0H_qQnxNVpsWjXoUGr1U&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/1045fb91-a285-416e-ace0-4f88879ace96)
 
 VIew 계층 구조는 부모 노드(ViewGroups)에서 리프노드(Child Views)의 트리구조와 같기 때문에 순회단계라고 한다. 따라서 각 메서드는 부모에서 시작해서 마지막노드까지 순회를 한다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/67ea589c-5d2e-44e9-bf37-7f2bf3f0825b/Untitled.png?id=ca688b8e-dfa1-4c44-a432-85d97e836cff&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708531200000&signature=HeY6Z3g5_KZSvvjSC9Zzm8_qPZIMK-KVBxIqW4wSFUU&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/04d1b192-08aa-497b-a419-2e35f1b2d89b)
 
 ## OnMeasure()
 
@@ -57,7 +57,7 @@ VIew 계층 구조는 부모 노드(ViewGroups)에서 리프노드(Child Views)�
 이 뷰 및 모든 하위 요소의 크기 요구사항을 확인하기 위해 호출됩니다.
 ```
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/f6ec8ead-09ec-4043-8988-efc7b4c338d6/Untitled.png?id=820cd690-c275-4276-87f9-333954d31ca8&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708531200000&signature=V91iDl8qbn3xRnHCzRZpWUGEXa93LasY13HftJULr-c&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/d3a01355-a4ec-43cf-bcd5-0f8c5881a3f0)
 
 파라미터로는 2개의 값을 받는다.
 

@@ -225,7 +225,7 @@ Heap?
     - min heap : 각 노드의 값이 자식 노드의 값보다 작거나 같다.
     - max heap : 각 노드의 값이 자식 노드의 값보다 크거나 같다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/85238a6a-78c8-4cbd-ba8b-8c21adcbac4e/Untitled.png?id=4058a241-a193-4b23-9427-8d28b223dd80&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708524000000&signature=8QSxJKlz5X2bnmCO93OCw-nYxAWGTQL8JRr5LzIkCio&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/d13e9a60-01e7-4f42-8270-806ee50fcee1)
 
 - 최악의 경우 `O(nlogn)`의 시간복잡도를 가진다.
 
@@ -268,4 +268,4 @@ static void hearypSort(int n) {
 - 일반적인 `O(nlogn)` 정렬 알고리즘에 비해 성능은 약간 떨어진다.
 
 
-![](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/f1dcee85-4599-4c72-83cd-5e76124eaf2f/Untitled.png?id=c211f422-c5c2-4a34-aef2-4222a959bb3f&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708524000000&signature=mTl7lU31pLNrCmWRUjscBJOfpxRRjFgph7abBsWXzoc&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/ad7e6bf1-77c8-47a2-9952-252efb6b415f)

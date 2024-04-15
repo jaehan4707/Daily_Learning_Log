@@ -13,7 +13,8 @@
 - FloatingActionButon
 - Drawer
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/c7c9963a-6b02-4e47-a706-c4c320ece7df/Untitled.png?id=a8710344-b3db-4509-a9a7-d08e27416b4d&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1708444800000&signature=PurJpHblgpmPX_TpFIIeBKNyX4P7yp7xN4OQ6fqNzDc&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/0a23c3ff-71bc-496a-853e-32661479e957)
+
 
 - floatingActionButtonPosition : floating action 버튼의 위치
     - default는 End이며, 가능한 값은 Center와 End이다.

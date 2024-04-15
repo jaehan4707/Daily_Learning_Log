@@ -20,7 +20,7 @@
 >
 
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/8c4d988e-3fe6-4e42-85d4-85a8843c26cc/Untitled.png?id=34ce2001-7260-4388-81fc-9342a5c93a6a&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709373600000&signature=8PkxPupqAFo_sj1xP7LIN007PpKl5Fe9uLNBRGBupFw&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/197dad92-7435-4758-8d33-a8d0d9da9b5f)
 
 MVI는 UDF 구조이다.
 
@@ -83,7 +83,7 @@ Logging, 토스트 노출, Navigation등이 있는데, 이는 상태를 변경�
 
 즉 이벤트 채널을 하나 더 생성하는 것이다.
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/686cc1ae-a6bc-417d-b392-fd7bcb6f9776/Untitled.png?id=beab4987-5664-490d-8c15-cd21f67d565d&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709373600000&signature=yb-8yM6Zx5Zymvdg9cahvtbPhixswYIcucTxOD0Lr2w&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/1818de32-174b-407b-b95b-49f96cace65e)
 
 
 
@@ -95,7 +95,7 @@ Logging, 토스트 노출, Navigation등이 있는데, 이는 상태를 변경�
 
 ex) 로딩중을 표현하고 싶은 상태와 로딩 후 리스트를 표시해야하는 상태가 충돌하는 경우
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/74337a53-f236-456d-ae7b-9f49828217c1/Untitled.png?id=964688bf-18bf-4c86-9cf8-a0b09944a91b&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709373600000&signature=L2vnU21Z8TdLz2yjGdqREcZ69g2sE0K7yFAtfNWmsrI&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/4996ace7-2218-4d7a-aab1-be70054a870a)
 
 ### 앱의 상태 충돌이 일어나는 이유
 
@@ -117,7 +117,7 @@ MVI
 
 데이터의 흐름은 UDF로 설계
 
-![Untitled](https://file.notion.so/f/f/bea1f681-e907-4ad0-8d9e-c46aa582a35d/da89773f-cf0f-4809-ac0c-046a4aa7e272/Untitled.png?id=d95db47a-c3a9-4718-b086-ff2d74df3fc1&table=block&spaceId=bea1f681-e907-4ad0-8d9e-c46aa582a35d&expirationTimestamp=1709373600000&signature=5yLJwzlRfxkMDT7SW9XJ2KOzm7ZXoVDFLRcLzMaU1qI&downloadName=Untitled.png)
+![image](https://github.com/jaehan4707/Daily_Learning_Log/assets/99114456/7202318b-71e7-4a61-a757-731c2dcbcdb6)
 
 단방향으로 흐르고 있다.
 
