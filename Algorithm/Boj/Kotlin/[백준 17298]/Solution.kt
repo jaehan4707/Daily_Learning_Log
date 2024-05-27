@@ -1,12 +1,15 @@
+import java.lang.StringBuilder
 import java.util.Stack
 
 class Solution {
 
     private val br = System.`in`.bufferedReader()
     private var n = 0
+    private lateinit var graph: IntArray
+    private lateinit var answer: IntArray
     private val sb = StringBuilder()
-    private lateinit var ary: IntArray
-    private lateinit var near: IntArray
+
+    data class Item(val value: Int, val idx: Int)
 
     fun run() {
         input()
@@ -16,23 +19,28 @@ class Solution {
 
     private fun input() {
         n = br.readLine().toInt()
-        ary = br.readLine().split(" ").map { it.toInt() }.toIntArray()
-        near = IntArray(n){-1}
+        answer = IntArray(n) { -1 }
+        graph = br.readLine().split(" ").map { it.toInt() }.toIntArray()
     }
 
     private fun solution() {
-        val s = Stack<Int>()
-        for (i in n - 1 downTo 0) { //오른쪽에 있으면서 가장 왼쪽에 있는 수
-            while (s.isNotEmpty() && ary[s.peek()] <= ary[i]) {
-                s.pop()
+        val st = Stack<Item>()
+        graph.forEachIndexed { index, number ->
+            if (st.isEmpty()) {
+                st.push(Item(number, index))
+            } else {
+                while (st.isNotEmpty() && st.peek().value < number) {
+                    val item = st.peek()
+                    if (item.value < number) { // 위에 있는것보다 큰 수가 나올 때
+                        answer[item.idx] = number //오큰수
+                        st.pop()
+                    }
+                }
+                st.push(Item(number, index))
             }
-            if (s.size > 0) {
-                near[i] = ary[s.peek()]
-            }
-            s.push(i)
         }
-        for (i in 0..<n) {
-            sb.append(near[i]).append(" ")
+        answer.forEach {
+            sb.append("$it ")
         }
     }
 }
