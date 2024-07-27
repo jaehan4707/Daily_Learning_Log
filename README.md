@@ -2,7 +2,7 @@
 공부한것들을 기록할래요
 
 # 📚Things
-`Algorithm`, `Android`, `OS`,`Network`, `Kotlin`,`Data Structure`
+`Algorithm`, `Android`, `OS`,`Network`, `Kotlin`, `DB`, `Data Structure`
 
 # 📁Directory 
 ```bash
@@ -11,6 +11,7 @@
 ├── OS          # OS
 ├── Network     # Network
 └── Kotlin       # Kotlin
+└── DB       # DataBase
 └── Data Structure # 자료구조, 알고리즘 이론
 ```
 
