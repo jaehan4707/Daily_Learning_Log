@@ -3,12 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-/*
-학생들은 3번 ~ N+2번의 번호
-출석 코드 -> 입장 번호의 배수 -> 출석 코드 전달
-k명은 출석코드 제출 x, 보내지도 않음
-무작위로 한명에게 출석코드 보내는 행위를 Q번 , 특정 구간의 입장 번호를 받은 학생들 중 출석 X인 학생 수
- */
 public class Main {
 
     static BufferedReader br;
