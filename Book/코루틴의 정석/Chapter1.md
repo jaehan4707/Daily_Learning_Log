@@ -276,9 +276,3 @@ fun getElapsedTime(startTime: Long): String =
 ## 참고
 
 [https://product.kyobobook.co.kr/detail/S000212376884](https://product.kyobobook.co.kr/detail/S000212376884)
-
-[코틀린 코루틴의 정석 | 조세영 - 교보문고
-
-코틀린 코루틴의 정석 | 많은 개발자들이 어렵게 느끼는 비동기 프로그래밍을 다양한 시각적 자료와 이해하기 쉬운 설명을 통해 누구나 쉽게 이해할 수 있도록 설명한다. 안드로이드, 스프링 등
-
-product.kyobobook.co.kr](https://product.kyobobook.co.kr/detail/S000212376884)
