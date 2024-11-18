@@ -2,17 +2,25 @@
 공부한것들을 기록할래요
 
 # 📚Things
-`Algorithm`, `Android`, `OS`,`Network`, `Kotlin`, `DB`, `Data Structure`
+- `Algorithm`
+- `Android`
+- `Book`
+- `Data Structure`
+- `DB`
+- `Kotlin`
+- `Network`
+- `OS`
 
 # 📁Directory 
 ```bash
 ├── Algorithm    # Algorithm 문제 풀이
 ├── Android      # Android 공식 문서, 기술 정리
-├── OS          # OS
-├── Network     # Network
-└── Kotlin       # Kotlin
-└── DB       # DataBase
-└── Data Structure # 자료구조, 알고리즘 이론
+├── Book          # 개발 서적
+├── Data Structure # 자료구조, 알고리즘 이론
+├── DB       # 데이터베이스
+└── Kotlin       # 코틀린 언어
+└── Network # 네트워크
+└── OS # 운영체제
 ```
 
 # ✉️ Commit Message
