@@ -299,3 +299,263 @@ fun main(): Unit = runBlocking {
 ```
 
 그러면 job1이 취소 완료될 때까지 runBlocking 코루틴이 일시 중단되고, Job2 실행 함수의 호출을 보장할 수 있게 된다.
+
+### 코루틴의 취소 확인
+
+**cancel** 함수나, **cancelAndJoin** 함수는 코루틴을 즉시 취소하는 것이 아닌 취소 요청을 보내는 함수이다. 취소 요청을 받은 코루틴이 요청을 확인하는 시점에 비로소 취소가 된다.
+
+만약 코루틴이 취소 요청을 확인하지 않는다면 영원히 취소되지 않는다.
+
+그렇다면 이 코루틴들은 언제 취소를 확인할까?
+
+코루틴이 **취소를 확인하는 시점은 일반적으로 일시 중단 지점이나 코루틴이 실행을 대기하는 시점**이며,  
+이 시점들이 없다면 코루틴은 취소되지 않는다.
+
+```
+fun main(): Unit = runBlocking {
+    val job1 = launch(Dispatchers.Default) {
+          while(true){
+            println("작업 중!")
+        }
+    }
+    delay(1000L)
+    job1.cancel()
+}
+```
+
+![](https://blog.kakaocdn.net/dn/rB7UZ/btsKTVmfdIn/8bzu2uYPLkQLKzzQxzMPiK/img.png)
+
+1초 후 cancel 요청을 했지만, 코루틴이 취소되지 않고, 계속해서 while문을 실행시킨다.
+
+취소되지 않는 이유는 **코루틴의 취소를 확인하지 못했기 때문이다.**
+
+현재 코드로는 while문을 벗어날 수 없고, while 문 내부에도 일시 중단 지점이 없기 때문에 취소를 확인할 시점이 없다.
+
+해당 코드가 취소되도록 만드는 방법은 세 가지 방법이 있다.
+
+1.  dealy
+2.  yield
+3.  CoroutineScope.isActive
+
+#### delay를 사용한 취소 확인
+
+delay는 suspend 함수로 선언돼 특정 시간만큼 호출부의 코루틴을 일시 중단하게 만든다.  
+코루틴은 일시 중단되는 시점에 코루틴의 취소를 확인하기 때문에 while문 내부에 delay를 사용하면 일시 중단 후 취소를 확인할 수 있다.
+
+```
+fun main(): Unit = runBlocking {
+    val job1 = launch(Dispatchers.Default) {
+        while (true){
+            println("작업 중!")
+            delay(1L)
+        }
+    }
+    delay(10L)
+    job1.cancel()
+}
+```
+
+![](https://blog.kakaocdn.net/dn/VpZXx/btsKU8ZbqDs/EacXwWl0ptTuh2Co9GY3C0/img.png)
+
+코드의 실행 결과를 보면 10ms 이후에 프로세스가 종료됨을 확인할 수 있다.
+
+**하지만 이 방법은 while문이 반복될 때마다 작업을 일시 중단 시키고 있고, 이는 성능저하의 원인이 될 수 있다.**
+
+#### yield를 사용한 취소 확인
+
+> **yield 함수는 자신이 사용하던 스레드를 양보한다.  
+> **
+
+**스레드 사용을 양보한다는 것은 스레드 사용을 중단한다는 뜻**으로 yield를 호출한 코루틴이 일시 중단되며 이 시점에 취소됐는지 확인한다.
+
+```
+fun main(): Unit = runBlocking {
+    val job1 = launch(Dispatchers.Default) {
+        while (true){
+            println("작업 중!")
+            yield()
+        }
+    }
+    delay(10L)
+    job1.cancel()
+}
+```
+
+![](https://blog.kakaocdn.net/dn/b5ivZ9/btsKTDTnHnH/AAXlcjxc41TTMg5qDywtkk/img.png)
+
+**하지만 근본적으로 while 문 내부에서 일시 중단시키는 과정은 반복되고, 이러한 작업은 성능 저하로 이어진다.**
+
+#### CoroutineScope.isActive를 사용한 취소 확인
+
+**CorotuineScope**는 코루틴이 활성화됐는지 확인할 수 있는 **Boolean 타입의 프로퍼티인 isActive**를 제공한다.  
+코루틴에 취소가 요청되면 isActive 프로퍼티의 값은 false로 바뀌며, while 문의 인자로 isActive를 넘기면 코루틴이 취소 요청이 되면 while문을 취소시킬 수 있다.
+
+```
+fun main(): Unit = runBlocking {
+    val job1 = launch(Dispatchers.Default) {
+        while (this.isActive) {
+            println("작업 중!")
+            yield()
+        }
+    }
+    delay(10L)
+    job1.cancel()
+}
+```
+
+![](https://blog.kakaocdn.net/dn/dy3MDD/btsKVvT4Cy9/McBlcZNwbmpgodwi5YLkIK/img.png)
+
+이 방법을 사용하면 코루틴이 잠시 멈추지도 않고 스레드 사용을 양보하지도 않으면서 계속 작업을 할 수 있어 효율적이다.
+
+### 코루틴의 상태와 Job의 상태 변수
+
+![](https://blog.kakaocdn.net/dn/emRMCH/btsKS80FU8t/h8dmdQSunYn66xVtTdYxK1/img.png)
+
+코루틴은 위 그림과 같이 6가지 상태를 가질 수 있다.
+
+-   생성 : 코루틴 빌더를 통해 코루틴을 생성하면 코루틴은 기본적으로 생성 상태에 놓이며, **자동으로 실행 중 상태로 넘어간다**.  
+    만약 생성 상태의 코루틴이 실행 중 상태로 자동으로 변경되지 않도록 만들고 싶다면 코루틴 빌더의 start 인자로 CoroutineStart.Lazy를 넘겨 지연 코루틴을 만들면 된다.
+-   실행 중 : 지연 코루틴이 아닌 코루틴을 만들면 자동으로 실행 중 상태로 바뀐다.  
+    코루틴이 실제로 실행 중일 때뿐만 아니라 실행된 후에 일시 중단된 때도 실행 중 상태로 본다.
+-   실행 완료 : 코루틴의 모든 코드가 실행 완료된 경우 실행 완료 상태로 넘어간다.
+-   취소 중 : Job.cancel(), cancelAndJoin을 통해 코루틴에 취소가 요청됐을 경우 취소 중 상태로 넘어가며, 이는 아직 취소된 상태가 아니어서 코루틴은 계속해서 실행된다.
+-   취소 완료 : 코루틴의 취소 확인 시점에 취소가 확인된 경우 취소 완료 상태가 된다.  
+    이 상태에서는 더 이상 실행되지 않는다.
+
+Job 객체는 코루틴이 어떤 상태에 있는지 나타내는 상태 변수들을 외부로 공개한다.  
+상태 변수는 **isActive, isCancelled, isCompleted**의 세가지이며, 각 변수는 모두 boolean 타입이다.
+
+-   isActive : 코루틴이 활성화 돼 있는지의 여부, 코루틴이 활성화돼 있으면 true를 반환하고, 활성화돼 있지 않으면 false를 반환한다. 활성화돼 있다는 것은 코루틴이 실행된 후 취소가 요청되거나 실행이 완료되지 않은 상태라는 의미이다. 따라서 취소가 요청되거나 실행이 완료된 코루틴은 활성화되지 않은 것으로 본다.
+-   isCancelled : 코루틴이 취소 요청됐는지의 여부, 요청되기만 하면 true가 반환되므로 true이더라도 즉시 취소되는 것은 아니다.
+-   isCompleted : 코루틴 실행이 완료됐는지의 여부, 실행 중일 경우 false를 반환하고, 실행 완료, 취소 완료일 경우 true를 반환한다.
+
+#### 생성 상태의 코루틴
+
+![](https://blog.kakaocdn.net/dn/pfeHG/btsKVtvfmx8/vaFmkO70GpBMzHnqW9vkKk/img.png)
+
+```
+**코루틴이 생성만 되고 실행되지 않은 상태**
+```
+
+생성 상태의 코루틴을 만들기 위해서는 지연 시작이 적용된 코루틴을 생성해야 한다.
+
+```
+fun main(): Unit = runBlocking {
+    val job1 = launch(start = CoroutineStart.LAZY) {
+        delay(1000L)
+    }
+    printJobState(job1)
+}
+```
+
+![](https://blog.kakaocdn.net/dn/pJBEm/btsKUfEI5iO/RzXgBFis5VnMrCzKwvjKE1/img.png)
+
+**코드의 실행 결과를 보면 생성된 후 실행 X, 취소 요청 X, 실행 완료 X → 모두 false가 반환된다.**
+
+#### 실행 중 상태의 코루틴
+
+![](https://blog.kakaocdn.net/dn/2iXj4/btsKVqyxIcr/LsNKVA9XeVbnFAnamZDVt1/img.png)
+
+코루틴 빌더로 코루틴을 생성하면 **CoroutineDispatcher에** 의해 스레드로 보내져 실행되고, 이때의 코루틴의 상태를 **실행 중** 상태라 부른다.
+
+```
+fun main(): Unit = runBlocking {
+    val job1 = launch {
+        delay(1000L)
+    }
+    printJobState(job1)
+}
+```
+
+![](https://blog.kakaocdn.net/dn/bTea7A/btsKT4pDpkY/MYCD1wYFrYukrz2grdJu0K/img.png)
+
+**실행 후 취소 요청 X, 실행 완료 X → isActive만 true**
+
+#### 실행 완료 상태의 코루틴
+
+![](https://blog.kakaocdn.net/dn/kZmvT/btsKUiuH0br/Eo8syBO14HZKhm0qCk2AsK/img.png)
+
+1초간 실행되는 코루틴을 생성하고 3초 대기후 Job의 상태를 출력해 보는 코드를 작성해 보자.
+
+```
+fun main(): Unit = runBlocking {
+    val job1 = launch {
+        delay(1000L)
+    }
+    delay(3000L)
+    printJobState(job1)
+}
+```
+
+![](https://blog.kakaocdn.net/dn/6BTL5/btsKVbIqFEj/Krhd5wMPEzq9p0iVqSJ7hK/img.png)
+
+3초가 지난 시점이라, 코루틴이 실행 완료되고 isCompleted가 true 인 것을 확인할 수 있다.
+
+#### 취소 중인 코루틴
+
+![](https://blog.kakaocdn.net/dn/pnzlW/btsKT3EeIWr/KEuDgwuLakpRtQi84kWXw1/img.png)
+
+취소가 요청됐으나 취소되지 않은 상태인 취소 중 코루틴의 상태를 하기 위해선 코루틴의 취소를 요청해야 한다.
+
+```
+fun main() = runBlocking {
+    val job: Job = launch {
+        while (true){
+
+        }
+    }
+    job.cancel()
+    printJobState(job)
+}
+```
+
+위 코드에서는 코루틴이 취소를 확인할 수 있는 시점이 없어서 실제로 코루틴이 취소 요청만 보낼 뿐이지, 실제로 취소되지는 않으므로, 취소 중인 상태에 머물고 있다.
+
+![](https://blog.kakaocdn.net/dn/ABZY5/btsKVvzLrDh/KZHHh7GlfHOwZkm0veCeIk/img.png)
+
+따라서 결과는 isCompleted가 아닌, isCancelled의 상태가 유지된다.  
+**중요한 점은 취소가 요청되고, 실제로 코드가 실행 중이더라도 코루틴이 활성화된 상태로 보지 않아 isActive는 false가 된다.**
+
+#### 취소 완료된 코루틴
+
+![](https://blog.kakaocdn.net/dn/1Nqxu/btsKTD6UEMw/sQR5hjBEBoobpXmS7c6wh0/img.png)
+
+코루틴은 취소가 요청되고 취소 요청아 확인되는 시점에 취소가 완료된다.
+
+```
+fun main() = runBlocking {
+    val job: Job = launch {
+        delay(5000L)
+    }
+    job.cancelAndJoin()
+    printJobState(job)
+}
+```
+
+이 코드에서는 launche 함수를 통해 5초간 지속되는 코루틴을 생성한 후, 코루틴이 취소될 수 있도록 cancelAndJoin 함수를 호출한다.  
+5초가 지난 후, 일시 중단 상태가 되고, 코루틴의 취소 요청을 확인했으므로, 코루틴의 상태는 취소 완료가 된다.
+
+![](https://blog.kakaocdn.net/dn/bcG9Tv/btsKUlLm6AI/BhtEAVm3DcZqb7orr0cKr0/img.png)
+
+#### 코루틴 상태와 Job 상태
+
+| 코루틴 상태 | isActive | isCancelled | isCompleted |
+| --- | --- | --- | --- |
+| 생성 | false | false | false |
+| 실행 중 | true | false | false |
+| 실행 완료 | false | false | true |
+| 취소 중 | false | true | false |
+| 취소 완료  | false | true | true |
+
+# 요약
+
+1.  runBlocking 함수와 launche 함수는 코루틴을 만들기 위한 코루틴 빌더 함수이다.
+2.  launch 함수를 호출하면 Job 객체가 만들어져 반환되며, Job 객체는 코루틴의 상태를 추적하고 제어하는 데 사용된다.
+3.  Job 객체의 Join 함수를 호출하면 함수를 호출한 코루틴이 Job 객체의 실행이 완료될 때까지 일시 중단된다.
+4.  joinAll 함수를 사용해 복수의 코루틴이 실행 완료될 때까지 대기할 수 있다.
+5.  Job 객체의 cancel 함수를 사용해 코루틴에 취소를 요청할 수 있다.
+6.  cancel 함수가 호출되면 코루틴이 곧바로 취소되는 것이 아니라 취소 플래그의 상태만 바뀌는 것이다.
+7.  코루틴에 취소를 요청한 후 취소가 완료될 때까지 대기하고 나서 다음 코드를 실행하고 싶다면 cancel 대신 cancelAndJoin 함수를 사용하면 된다.
+8.  delay, yield 함수나 isActive 프로퍼티 등을 사용해 코루틴이 취소를 확인할 수 있도록 만들 수 있다.
+9.  코루틴은 생성, 실행 중, 실행 완료 중, 취소 중, 취소 완료 상태를 가진다.
+10.  Job 객체는 isActive, isCancelled, isCompleted 프로퍼티를 통해 코루틴의 상태를 나타낸다.
