@@ -559,3 +559,7 @@ fun main() = runBlocking {
 8.  delay, yield 함수나 isActive 프로퍼티 등을 사용해 코루틴이 취소를 확인할 수 있도록 만들 수 있다.
 9.  코루틴은 생성, 실행 중, 실행 완료 중, 취소 중, 취소 완료 상태를 가진다.
 10.  Job 객체는 isActive, isCancelled, isCompleted 프로퍼티를 통해 코루틴의 상태를 나타낸다.
+
+## 참고
+
+[https://product.kyobobook.co.kr/detail/S000212376884](https://product.kyobobook.co.kr/detail/S000212376884)
