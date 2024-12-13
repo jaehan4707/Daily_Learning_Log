@@ -7,6 +7,7 @@
 - `Book`
 - `Data Structure`
 - `DB`
+- 'Design Pattern'
 - `Kotlin`
 - `Network`
 - `OS`
@@ -18,6 +19,7 @@
 ├── Book          # 개발 서적
 ├── Data Structure # 자료구조, 알고리즘 이론
 ├── DB       # 데이터베이스
+├── Design Pattern       # 디자인 패턴
 └── Kotlin       # 코틀린 언어
 └── Network # 네트워크
 └── OS # 운영체제
